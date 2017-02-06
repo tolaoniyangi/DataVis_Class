@@ -83,3 +83,19 @@ li.assignmentLink > a:hover{
     background-color: #FFFF00; 
 }
 
+#page1{
+    background-color: blue;
+    height: 1000px;
+}
+
+#page2{
+    background-color: black;
+    height: relative;
+}
+
+#page3{
+    background-color: white;
+    height: 1000px;
+}
+#nav{
+}
