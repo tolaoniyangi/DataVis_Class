@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Bar/Donut Charts</title>
+
+    <!-- Stylesheet link -->
+    <!-- HAD TO PUT ../ before css to get it to link (because i needed to direct it to the upper folder) -->
+    <link rel="stylesheet" type="text/css" href="../css/assignment-1.css">
+
+    <!-- Google fonts code -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+ 
+    <!-- favicon - img for browser -->
+    <link rel="shortcut icon" href="../img/donutchartlogo.png"/>
+
+    <!-- jQuery for smooth scrolling between "pages" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+    <script>
+    $('.smooth').on('click', function() {
+      $.smoothScroll({
+          scrollElement: $('body'),
+          scrollTarget: '#' + this.id
+      });
+    
+      return false;
+    }); 
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="sidenav"> <!-- # in the link tells the browser that the link is in the page -->
+      <a href="assignment1_home.html" alt= "Home">
+        <img id="logo" src="../img/donutchartlogo.png" alt = "Home">
+      </a>
+      <li><a href="assignment1_pages.html#HISTORY">HISTORY</a></li> <!-- Should include history of bar/donut charts. Who was the first to use it? What other graphs is it related to or did it evolve from?-->
+      <li><a href="assignment1_pages.html#ABOUT">ABOUT</a></li> <!-- Should include description of bar/donut charts and types of data for which they are appropriate, advantages and disadvantages -->
+      <li><a href="assignment1_pages.html#HOW TO">HOW TO</a></li> <!-- Brief description of  how to build the chart (what are the axis, what other elements does it need, what software or tools facilitate the building of this type of chart) -->
+      <li><a href="assignment1_pages.html#EXAMPLES">EXAMPLES</a></li> <!-- Should include images/examples of bar/donut charts from the internet/in other projects -->
+    </div>
+
+    <div class="containerPage">
+      <h1>
+        About<br> <strong> Tola </strong> Oniyangi 
+      </h1>
+
+      <p class="bioText">
+        I am a student at Columbia University's <a href="http://www.arch.columbia.edu/"> Graduate School of Architecture, Planning and Preservation (GSAPP)</a> where I study both <font size = 5 em>Architecture </font> and <font size = 5 em>  Urban Planning</font>. I work as a researcher at the university's <a href="http://buellcenter.org/">Buell Center for the Study of American Architecture </a>, doing architectural research for exhibitions, and an assistant in the Urban Planning program's Urban Analytics concentration, providing technical and administrative support to professors in the concentration. 
+      </p> 
+
+      <p class="bioText">
+        I am interested in <STRONG>intersections</STRONG> between architecture and technology, and have dabbled in web design, machine learning and mapping. I am excited to explore more forms of data visualization, and hopefully, I am able to combine my interests in design, planning and technology wherever I end up post-graduation. 
+      </p>
+
+  </body>
+</html>

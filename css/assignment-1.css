@@ -1,0 +1,195 @@
+/* general style*/
+
+body{
+    font-family: 'Roboto Condensed', helvetica, sans-serif;
+}
+
+
+.containerPage {
+    position: relative;
+    padding: 0 0 0 14.75%;
+    height: 100%;
+    width: auto;
+    overflow-x: hidden;
+}
+
+.bodyText{
+    color: #4d4d4d;
+    margin-left: 1em;
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+
+/* fonts and style */
+h1{
+    color: #800024;
+    font-weight: 300;
+    font-size: 3em;
+    text-align: right;
+    margin-left: 1em;
+    border-right: double;
+    width:75%;
+}
+
+h2{
+    color: #800024;
+    font-weight: 300;
+    font-size: 2em;
+    text-align: center;
+    margin: .1% auto auto auto;
+    border-top: double;
+    padding-top: 1%;
+}
+
+h3{
+    color: #C70039;
+    font-weight: 500;
+    font-size: 3.5em;
+    text-align: left;
+    margin: auto;
+    float: left;
+}
+
+p.bioText {
+    font-weight: 150;
+    font-size: 1em;
+    line-height: 130%;
+    text-align: left ;
+}
+
+.bioText {
+    width: 66%;  
+    margin-left: 3em;  
+}
+
+.bodyText{
+    color: #4d4d4d;
+    margin-left: 1em;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: .9em;
+    margin-top: 0;
+    line-height: 120%;
+}
+
+.History {
+    padding-bottom: 2%;
+}
+
+.wrap {
+    float: right;
+    display: inline;
+}
+
+.wrap:hover {
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    .wrap {
+        float: none !important;
+        clear: right;
+        display: block;
+        width: 100%;
+    }
+}
+
+table{
+    padding-left: 10%;
+    font-size: .85em;
+}
+
+table, tr, td, th{
+    width: 75%;
+    text-align: center;
+    padding: 1%; /*padding for cells */
+    color: #000; /* font color */
+    border: .1em solid #737373;
+    border-collapse: collapse;
+    table-layout: fixed; /* stops table cells/span from fitting to contents - makes cells evenly spaced*/
+    margin: auto auto 3% auto; /* centers the table on the pge*/
+}
+
+
+.grid-item-About {
+    width: auto;
+    max-height: 10em;
+    position: center;
+    margin: 0 .1em .1em .1em;
+    opacity: 0.7;
+}
+
+.grid-Examples {
+    column-count: 2;
+    column-gap: .2em;
+    padding-top: 1em; 
+}
+
+.grid-item-Examples {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0 .1em .1em .1em;
+}
+
+.grid-item:click {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:150%;
+    height:auto;
+    display:inline;
+    z-index:999;
+}
+
+
+@media screen and (max-width: 750px) {
+    .grid {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 15%; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 3%; /* Place content x from the top */
+    list-style-type: none; /* removes bullets from the side bar*/
+    border-right: .2em solid #A9A9A9;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    text-decoration: none;
+    padding-top: 10%; /*padding for the list*/
+    font-size: 1em;
+    color: #A9A9A9;
+    display: block;
+    text-align: center;
+}
+
+#logo {
+    width: 25%;
+    padding: 15% 0 20% 0; /* top | right | bottom | left; padding for just hte logo */
+    margin: auto;
+    width: 50%;
+    display: block;
+    opacity: 0.5;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Pie/Donut Charts</title>
+
+    <!-- Stylesheet link -->
+    <!-- HAD TO PUT ../ before css to get it to link (because i needed to direct it to the upper folder) -->
+    <link rel="stylesheet" type="text/css" href="../css/assignment-1.css">
+
+    <!-- Google fonts code -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+ 
+    <!-- favicon - img for browser -->
+    <link rel="shortcut icon" href="../img/donutchartlogo.png"/>
+
+    <!-- jQuery for smooth scrolling between "pages" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+    <script>
+    $('.smooth').on('click', function() {
+      $.smoothScroll({
+          scrollElement: $('body'),
+          scrollTarget: '#' + this.id
+      });
+    
+      return false;
+    }); 
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="sidenav"> <!-- # in the link tells the browser that the link is in the page -->
+      <a href="assignment1_home.html" alt= "Home">
+        <img id="logo" src="../img/donutchartlogo.png" alt = "Home">
+      </a>
+      <li><a href="#HISTORY">HISTORY</a></li> <!-- Should include history of bar/donut charts. Who was the first to use it? What other graphs is it related to or did it evolve from?-->
+      <li><a href="#ABOUT">ABOUT</a></li> <!-- Should include description of bar/donut charts and types of data for which they are appropriate, advantages and disadvantages -->
+      <li><a href="#HOW TO">HOW TO</a></li> <!-- Brief description of  how to build the chart (what are the axis, what other elements does it need, what software or tools facilitate the building of this type of chart) -->
+      <li><a href="#EXAMPLES">EXAMPLES</a></li> <!-- Should include images/examples of bar/donut charts from the internet/in other projects -->
+    </div>
+
+    <div class="containerPage">
+       <a id="HISTORY" class="smooth"></a>
+          <h2> HISTORY </h2>
+       <div class="History">
+          <img  class="wrap" src="../img/pie-chart-original.png" alt="Original Pie Chart" onclick="window.open('http://www.jpowered.com/graphs-and-charts/pie-chart-history.htm')"> 
+          <p class = "bodyText"> The earliest known instance of pie chart usage was over two centuries ago, in 1801, by William Playfair. He published the image below comparing European countries in 'The Statistical Beviary', and we can see from the image that elements of the pie charts we see today are present in the image. In this pie chart, as with modern pie charts, the pie is split into sections and the angle of these sections represents the value of data. </p>  
+          <p class = "bodyText"> Pie charts did not become immediately popular, and it was not until 1858 that a French engineer began using the pie chart again. Minard recontextualized the pie chart by using it on <a href="https://en.wikipedia.org/wiki/Pie_chart#/media/File:Minard-carte-viande-1858.png"> maps</a> to represent additional information on cattle. </p>
+        </div>
+    </div>
+
+    <div class="containerPage">
+      <a id="ABOUT" class="smooth"></a>
+        <h2> ABOUT </h2>
+
+        <p class="bodyText"> Essentially, <font size=5 em>pie charts</font> work by assigning a set of values to a circle and denoting measures and proportions of those values through segments of the circle. These segments are based on an angular measure of values. There are many different types of pie charts, including but not limited to polar area diagrams, spie charts, radial charts, exploded pie charts, 3D pie charts and donut charts. <font size=5 em>Donut charts</font> are basically pie charts with a hole in the center. They work just like pie charts, except that data values are measured using relative lengths rather than relative angles, and the center in the circle can be used to give more information about the whole. </p>
+
+        <p class="bodyText"> Pie charts are good for comparing the size of sectors to one another and to the chart, but are not suitable for comparing to other pie charts. Donut charts, on the other hand, fix this problem by focusing on the different lengths of the arcs rather than the area of the overall chart. Moreover, the fact that the center of a donut chart is empty means it takes up less space than pie charts. These charts typically use color and/or texture to signify different values of data. Pie charts and donut charts are appropriate for representing data that adds up to a whole and cannot be subdivided into a lot of pieces. This is because visual recognition of different values reduces with increasing number of colors and slices. </p>
+
+        <table>
+
+          <tr> 
+            <th> <font size = 3.5 em> PIE CHART </font> </th>
+            <th> <font size = 3.5 em>  DONUT CHART </font> </th>
+          </tr>
+
+          <tr>
+            <td> <img class="grid-item-About" src="../img/pie-chart.png"> </td>
+            <td> <img class="grid-item-About" src="../img/donut-chart.png"></td>
+          </tr>
+
+          <tr>
+            <td colspan='2'> Communicates part to whole relationships through segmentation of a pie - people see a whole divided into parts, and all the pieces add up to 100% </td>
+          </tr>
+
+          <tr>
+            <td colspan='2'> Hard to compare different sections of the chart - easier to compare a part to whole</td>
+          </tr>
+
+          <tr>
+            <td>Leads people to compare angles which is less accurate than comparison by length. As a result, labels with numeric values should be included. In the case of 3D pie charts, distortion of the angle limits people's ability to read the chart. </td>
+            <td>Comparison of lengths helps with reading information correctly </td>
+          </tr>
+
+          <tr>
+            <td>Cannot be used with large pieces of data because labelling segments (through text, color, and texture) gets more difficult and people get more confused as you add more categories </td>
+            <td>Less difficult to do so, but still a problem</td>
+          </tr>
+
+          <tr>
+            <td colspan='2'> Easy to read for simple comparisons, can be understood quickly</td>
+          </tr>
+
+        </table>
+
+    </div> 
+
+    <div class="containerPage">
+      <a id="HOW TO" class="smooth"></a>
+        <h2> HOW TO </h2>
+
+        <p class="bodyText"> Some things to bear in mind when making a pie or donut chart: all segments should add up to 100% - i.e. all parts should add up to a whold, you should not include too many (up to 7) slices for ease of understanding, and the chart should be for comparing parts to a whole and not to each other, and the values are dissimilar. 
+        </p>
+
+        <p class="bodyText"> To make a pie chart, divide numerical data into constituent parts (or identify numerical data) and divide a circle into corresponding angular segments based on these values. It is easiest to make a table with labels and corresponding values for this step. For a donut chart, remove the center of the pie chart. Add labels, different colors and/or textures for greater communication through the chart. Microsoft Excel is the most commonly used tool for building this chart, although it can be done by hand or with more complex statistical tools such as Stata, R and Python.  
+        </p>
+
+    </div> 
+
+    <div class="containerPage">
+      <a id="EXAMPLES" class="smooth"></a>
+        <h2> EXAMPLES </h2>
+        <div class="grid-Examples">
+          <img class="grid-item-Examples" img src="../img/diabetes_donutchart.jpg" alt= "The Healthiest Year of my Life" onclick="window.open('http://www.popsci.com/diabetic-charts-years-worth-his-health-data')">
+                  
+          <img class="grid-item-Examples" src="../img/biblevisualization.jpg" alt= "Visualizing the Bible" onclick="window.open('http://www.chrisharrison.net/index.php/Visualizations/BibleViz')">   
+
+          <img class="grid-item-Examples" src="../img/censorship.jpg" alt="for my own good?" onclick="window.open('http://pfeng.cc/work/for-my-own-good')">        
+
+          <img class="grid-item-Examples" src="../img/majorworks.jpg" alt= "This is Living!" onclick="window.open('https://www.flickr.com/photos/densitydesign/3409542518/sizes/o/in/photostream') ">   
+          
+          <img class="grid-item-Examples" src="../img/nature.jpg" alt= "Visualizing Information Flow in Science" onclick="window.open('http://well-formed.eigenfactor.org/projects/well-formed/radial.html')">        
+          
+          <img class="grid-item-Examples" src="../img/netherlands.jpg" alt= "Arc" onclick="window.open('http://labs.digg.com/arc/')">  
+         
+          <img class="grid-item-Examples" src="../img/newmapofthehistoryofscience.jpg" lt= "TextArc Visualization of The History of Science" onclick="window.open('http://scimaps.org/dev/map_detail.php?map_id=140') "> 
+          
+          <img class="grid-item-Examples" src="../img/oneweekoftheguardian.jpg" alt= "One Week of the Guardian" onclick="window.open('https://visualizingdata.wordpress.com/2010/02/13/one-week-of-the-guardian/') ">
+          
+          <img class="grid-item-Examples" src="../img/schemaball.jpg" alt= "Schemaball" onclick="window.open('http://mkweb.bcgsc.ca/schemaball/?home') ">     
+    </div>
+
+  </body>
+</html>
