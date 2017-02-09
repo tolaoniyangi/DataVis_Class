@@ -4,39 +4,60 @@ body{
     font-family: 'Roboto Condensed', helvetica, sans-serif;
 }
 
-h1{
-    color: #581845;
-    font-weight: 400;
-    font-size: 2.5em;
-    text-align: left;
-    margin: auto;
+.containerPage {
+    position: relative;
+    padding: 4% 0 0 17%;
+    height: 100%;
+    width: 83%;
+    overflow-x: hidden;
+    display: block;
 }
 
-h2{
+.content {
+    position: relative;
+    padding-right: 0 !important;
+    display: inline block;
+}
+
+h1{
+    color: #C70039;
+    font-weight: 500;
+    font-size: 3.5em;
+    text-align: left;
+    margin: auto;
+    float: left;
+    -webkit-column-span: 1; /* Chrome, Safari, Opera */
+    column-span: 1;
+}
+
+p.bioText {
+    font-weight: 150;
+    font-size: 1em;
+    line-height: 130%;
+    text-align: left;
+    text-indent: 3em;
+}
+
+.bioText {
+    float: right;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 10em; /* Chrome, Safari, Opera */
+    -moz-column-gap: 10em; /* Firefox */
+    column-gap: 1em;
+    -webkit-column-span: 2; /* Chrome, Safari, Opera */
+    column-span: 2;
 }
 
 h3{
     color: #C70039;
     font-size: 1.25em;
     font-weight: 300;
-    max-width: 800px;
-    text-align: center;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    margin: 25px, 25px;
+    max-width: 100%;
+    text-align: left;
+    margin: .1% auto auto auto;
 }
-
-#logo {
-    width: 25%;
-    margin: auto;
-    width: 50%;
-    display: block;
-    padding-bottom: 45px;
-    opacity: 0.5;
-}
-
 
 /* The side navigation menu */
 .sidenav {
@@ -48,19 +69,28 @@ h3{
     left: 0;
     background-color: #fff;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 3%; /* Place content x from the top */
     list-style-type: none; /* removes bullets from the side bar*/
-    border-right: 3px solid #A9A9A9;
+    border-right: .2em solid #A9A9A9;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 10px 0px 8px 0px;
     text-decoration: none;
-    font-size: 16px;
+    padding-top: 10%; /*padding for the list*/
+    font-size: 1em;
     color: #A9A9A9;
     display: block;
     text-align: center;
+}
+
+#logo {
+    width: 25%;
+    padding: 15% 0 20% 0; /* top | right | bottom | left; padding for just hte logo */
+    margin: auto;
+    width: 50%;
+    display: block;
+    opacity: 0.5;
 }
 
 /* When you mouse over the navigation links, change their color */
