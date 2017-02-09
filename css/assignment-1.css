@@ -56,7 +56,7 @@ p.bioText {
 }
 
 .History {
-    width: 66;
+    padding-bottom: 2%;
 }
 
 .wrap {
@@ -76,11 +76,22 @@ p.bioText {
         width: 100%;
     }
 }
-.grid-About {
-    column-count: 2;
-    column-gap: 2em;
-    padding-top: 1em; 
-    float: right;
+
+table, tr, th, td{
+    width: 100%;
+    border: 1px #A9A9A9;
+    border-collapse: collapse;
+}
+
+th, tr{
+    text-align: center;
+}
+
+td, tr{
+    padding: 1%;
+    text-align: left;
+    border: 1px #A9A9A9;
+    border-collapse: collapse;
 }
 
 .grid-item-About {
@@ -88,6 +99,7 @@ p.bioText {
     max-height: 10em;
     position: center;
     margin: 0 .1em .1em .1em;
+    opacity: 0.7;
 }
 
 .grid-Examples {

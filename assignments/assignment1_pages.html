@@ -55,48 +55,59 @@
     <div class="containerPage">
       <a id="ABOUT" class="smooth"></a>
         <h2> ABOUT </h2>
-        <p class="bodyText"> Should include description of bar/donut charts and types of data for which they are appropriate, advantages and disadvantages !!!!!</p>
 
-        <p class="bodyText"> There are many different types of pie charts, including but not limited to polar area diagrams, spie charts, radial charts, exploded pie charts, 3D pie charts and donut charts. </p>
+        <p class="bodyText"> Essentially, <strong><font size=5 em>pie charts</font></strong> work by assigning a set of values to a circle and denoting measures and proportions of those values through segments of the circle. These segments are based on an angular measure of values. There are many different types of pie charts, including but not limited to polar area diagrams, spie charts, radial charts, exploded pie charts, 3D pie charts and donut charts. <strong><font size=5 em>Donut charts</font></strong> are basically pie charts with a hole in the center. They work just like pie charts, except that data values are measured using relative lengths rather than relative angles, and the center in the circle can be used to give more information about the whole. </p>
 
-        <p class="bodyText"> Donut charts, 
+        <p class="bodyText"> Pie charts are good for comparing the size of sectors to one another and to the chart, but are not suitable for comparing to other pie charts. Donut charts, on the other hand, fix this problem by focusing on the different lengths of the arcs rather than the area of the overall chart. Moreover, the fact that the center of a donut chart is empty means it takes up less space than pie charts. These charts typically use color and/or texture to signify different values of data. Pie charts and donut charts are appropriate for representing data that adds up to a whole and cannot be subdivided into a lot of pieces. This is because visual recognition of different values reduces with increasing number of colors and slices. </p>
 
-        <!--Table to have it read pros and cons/left and right-->
-        <p class="bodyText"> Pie Chart Advantages: https://www.quora.com/How-and-why-are-pie-charts-considered-evil-by-data-visualization-experts
-        "" 
-<br>
-        Pie Chart Disadvantages :  
-        
+        <table>
 
-        "Pie charts are primarily used to communicate a part-to-whole relationship
-Human visual comprehension is not well-suited to translating the area (let alone volume, in the case of 3D chart) of a pie-slice shape. The exception to this is a case in which the value represented is 0%, 25%, 50%, 75% or 100%.
-The are demonstrably less effective in communicating information, even part-to-whole relationships, than other charts (bar charts, for example.)
-"<br>
-Pie charts are supposed to be used to see how a "whole" is segmented in its parts. That's ok when you have two or three categories to visualize. But when you have multiple categories, it becomes hard for the user to identify the proportions correctly, compare different categories and gain any insight from the picture."<br>
+          <tr> 
+            <th> PIE CHART  </th>
+            <th>  DONUT CHART </th>
+          </tr>
 
-        "When you use a pie chart to compare multiple categories it gets hard to label the pieces of the pie. One solution people use is to add color and a legend to the pie chart, but that brings another problem: users get confused when you encode more than certain amount of different colors."
-<br>
-        Pie charts can mislead users by misrepresenting the actual data in an area that is not proportional. 
-        <br>
+          <tr>
+            <td> <img class="grid-item-About" src="../img/pie-chart.png"> </td>
+            <td> <img class="grid-item-About" src="../img/donut-chart.png"></td>
+          </tr>
 
-        Pie charts lead people to compare angles rather than lengths 
+          <tr>
+            <td colspan='2'> Communicates part to whole relationships through segmentation of a pie - people see a whole divided into parts, and all the pieces add up to 100% </td>
+          </tr>
 
-        Pie charts 
+          <tr>
+            <td colspan='2'> Hard to compare different sections of the chart - easier to compare a part to whole</td>
+          </tr>
 
-        Donut chart advantages: 
-        </p>
+          <tr>
+            <td>Leads people to compare angles which is less accurate than comparison by length. As a result, labels with numeric values should be included. In the case of 3D pie charts, distortion of the angle limits people's ability to read the chart. </td>
+            <td>Comparison of lengths helps with reading information correctly </td>
+          </tr>
 
-        <div class=grid-About>
-          <img class="grid-item-About" src="../img/pie-chart.png">
-          <img class="grid-item-About" src="../img/donut-chart.png">
-        </div> 
+          <tr>
+            <td>Cannot be used with large pieces of data because labelling segments (through text, color, and texture) gets more difficult and people get more confused as you add more categories </td>
+            <td>Less difficult to do so, but still a problem</td>
+          </tr>
+
+          <tr>
+            <td colspan='2'> Easy to read for simple comparisons, can be understood quickly</td>
+          </tr>
+
+        </table>
+
     </div> 
 
     <div class="containerPage">
       <a id="HOW TO" class="smooth"></a>
         <h2> HOW TO </h2>
-        <p class="bodyText"> Brief description of  how to build the chart (what are the axis, what other elements does it need, what software or tools facilitate the building of this type of chart)
+
+        <p class="bodyText"> Some things to bear in mind when making a pie or donut chart: all segments should add up to 100% - i.e. all parts should add up to a whold, you should not include too many (up to 7) slices for ease of understanding, and the chart should be for comparing parts to a whole and not to each other, and the values are dissimilar. 
         </p>
+
+        <p class="bodyText"> To make a pie chart, divide numerical data into constituent parts (or identify numerical data) and divide a circle into corresponding angular segments based on these values. It is easiest to make a table with labels and corresponding values for this step. For a donut chart, remove the center of the pie chart. Add labels, different colors and/or textures for greater communication through the chart. Microsoft Excel is the most commonly used tool for building this chart, although it can be done by hand or with more complex statistical tools such as Stata, R and Python.  
+        </p>
+
     </div> 
 
     <div class="containerPage">
