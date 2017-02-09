@@ -13,7 +13,13 @@ body{
     overflow-x: hidden;
 }
 
+.bodyText{
+    color: #4d4d4d;
+    margin-left: 1em;
+    font-family: 'Roboto', helvetica, sans-serif;
+}
 
+/* fonts and style */
 h1{
     color: #800024;
     font-weight: 300;
@@ -31,6 +37,7 @@ h2{
     text-align: center;
     margin: .1% auto auto auto;
     border-top: double;
+    padding-top: 1%;
 }
 
 h3{
@@ -51,8 +58,16 @@ p.bioText {
 
 .bioText {
     width: 66%;  
-    margin-left: 3em;
-    
+    margin-left: 3em;  
+}
+
+.bodyText{
+    color: #4d4d4d;
+    margin-left: 1em;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: .9em;
+    margin-top: 0;
+    line-height: 120%;
 }
 
 .History {
@@ -77,22 +92,22 @@ p.bioText {
     }
 }
 
-table, tr, th, td{
-    width: 100%;
-    border: 1px #A9A9A9;
-    border-collapse: collapse;
+table{
+    padding-left: 10%;
+    font-size: .85em;
 }
 
-th, tr{
+table, tr, td, th{
+    width: 75%;
     text-align: center;
+    padding: 1%; /*padding for cells */
+    color: #000; /* font color */
+    border: .1em solid #737373;
+    border-collapse: collapse;
+    table-layout: fixed; /* stops table cells/span from fitting to contents - makes cells evenly spaced*/
+    margin: auto auto 3% auto; /* centers the table on the pge*/
 }
 
-td, tr{
-    padding: 1%;
-    text-align: left;
-    border: 1px #A9A9A9;
-    border-collapse: collapse;
-}
 
 .grid-item-About {
     width: auto;
@@ -132,11 +147,6 @@ td, tr{
         -webkit-column-count: 1;
         column-count: 1;
     }
-}
-
-.bodyText{
-    color: #4d4d4d;
-    margin-left: 1em;
 }
 
 /* The side navigation menu */
