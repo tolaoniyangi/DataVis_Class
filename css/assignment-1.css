@@ -55,10 +55,32 @@ p.bioText {
     
 }
 
+.History {
+    width: 66;
+}
+
+.wrap {
+    float: right;
+    display: inline;
+}
+
+.wrap:hover {
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    .wrap {
+        float: none !important;
+        clear: right;
+        display: block;
+        width: 100%;
+    }
+}
 .grid-About {
     column-count: 2;
     column-gap: 2em;
     padding-top: 1em; 
+    float: right;
 }
 
 .grid-item-About {
