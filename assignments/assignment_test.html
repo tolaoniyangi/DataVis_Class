@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Bar/Donut Charts</title>
+
+    <!-- Stylesheet link -->
+    <!-- HAD TO PUT ../ before css to get it to link (because i needed to direct it to the upper folder) -->
+    <link rel="stylesheet" type="text/css" href="../css/assignment-1.css">
+
+    <!-- Google fonts code -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- jQuery for smooth scrolling between "pages" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+    <script>
+    $('.smooth').on('click', function() {
+      $.smoothScroll({
+          scrollElement: $('body'),
+          scrollTarget: '#' + this.id
+      });
+    
+      return false;
+    }); 
+    </script>
+
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>BAR/DONUT CHARTS</h1>
+      <h3>by TOLA ONIYANGI </h3>
+    </div>
+
+    <div class="sidenav"> <!-- # in the link tells the browser that the link is in the page -->
+      <img id="logo" src="../img/donutchartlogo.png" alt = "Home">
+      <li><a href="#about">ABOUT</a></li> <!-- Should include description of bar/donut charts and types of data for which they are appropriate, advantages and disadvantages -->
+      <li><a href="#history">HISTORY</a></li> <!-- Should include history of bar/donut charts. Who was the first to use it? What other graphs is it related to or did it evolve from?-->
+      <li><a href="#how to">HOW TO</a></li> <!-- Brief description of  how to build the chart (what are the axis, what other elements does it need, what software or tools facilitate the building of this type of chart) -->
+      <li><a href="#examples">EXAMPLES</a></li> <!-- Should include images/examples of bar/donut charts from the internet/in other projects -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+/* general style*/
+
+body{
+    font-family: 'Roboto Condensed', helvetica, sans-serif;
+}
+
+h1{
+    color: #581845;
+    font-weight: 400;
+    font-size: 2.5em;
+    text-align: left;
+    margin: auto;
+}
+
+h2{
+}
+
+h3{
+    color: #C70039;
+    font-size: 1.25em;
+    font-weight: 300;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin: 25px, 25px;
+}
+
+#logo {
+    width: 25%;
+    margin: auto;
+    width: 50%;
+    display: block;
+    padding-bottom: 45px;
+    opacity: 0.5;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 15%; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    list-style-type: none; /* removes bullets from the side bar*/
+    border-right: 3px solid #A9A9A9;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 10px 0px 8px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #A9A9A9;
+    display: block;
+    text-align: center;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
