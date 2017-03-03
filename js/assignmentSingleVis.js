@@ -1,5 +1,5 @@
 // ***** Global variables ***** //
-var victimsTable;
+// var victimsTable;
 var yearlyTable;
 var maxTotal =[];
 var maxLabel=[];
@@ -7,65 +7,65 @@ var maxLength=550;
 
 // ***** Preload function ***** //
 function preload(){
-    victimsTable = loadTable('../data/ColombiaVictims_Indigenous_2000.csv', 'csv', 'header');
+    // victimsTable = loadTable('../data/ColombiaVictims_Indigenous_2000.csv', 'csv', 'header');
     yearlyTable = loadTable('../data/ColombiaVictims_Indigenous_ByYear.csv', 'csv', 'header');
     console.log('Done loading table...');
 }
 
 function setup() {
 
-  var Count=victimsTable.getRowCount();
-  print (Count) 
+  // var Count=victimsTable.getRowCount();
+  // print (Count) 
 
-  var CountYearly=yearlyTable.getRowCount();
-  print (CountYearly) 
+  // var CountYearly=yearlyTable.getRowCount();
+  // print (CountYearly) 
 
-  //calling out the columns to work with
-  totalYear=[]
-  for (var i = 0; i<CountYearly ; i++) {
-    totalYear[i]=yearlyTable.get(i, 0); 
-    selectedYearCount=totalYear.length;
-  }
+  // //calling out the columns to work with
+  // totalYear=[]
+  // for (var i = 0; i<CountYearly ; i++) {
+  //   totalYear[i]=yearlyTable.get(i, 0); 
+  //   selectedYearCount=totalYear.length;
+  // }
 
-  totalSUM=[]
-  for (var i = 0; i<CountYearly ; i++) {
-    totalSUM[i]=yearlyTable.get(i, 1); 
-    totalSUMCount=totalSUM.length;
-  }
+  // totalSUM=[]
+  // for (var i = 0; i<CountYearly ; i++) {
+  //   totalSUM[i]=yearlyTable.get(i, 1); 
+  //   totalSUMCount=totalSUM.length;
+  // }
 
-  total=[]
-  for (var i = 0; i<Count ; i++) {
-    total[i]=victimsTable.get(i, 4); 
-    totalCount=total.length;
-  }
+  // total=[]
+  // for (var i = 0; i<Count ; i++) {
+  //   total[i]=victimsTable.get(i, 4); 
+  //   totalCount=total.length;
+  // }
 
-  years=[]
-  for (var i = 0; i<Count ; i++) {
-    years[i]=victimsTable.get(i, 0); //gets the value from row i, column 1 in the file
-    yearsCount=years.length ;
-  }
+  // years=[]
+  // for (var i = 0; i<Count ; i++) {
+  //   years[i]=victimsTable.get(i, 0); //gets the value from row i, column 1 in the file
+  //   yearsCount=years.length ;
+  // }
 
 
-  type=[]
-  for (var i = 0; i<Count ; i++) {
-    type[i]=victimsTable.get(i, 1); 
-    typeCount=type.length;
-  }
+  // type=[]
+  // for (var i = 0; i<Count ; i++) {
+  //   type[i]=victimsTable.get(i, 1); 
+  //   typeCount=type.length;
+  // }
 
-  genderSexuality=[]
-  for (var i = 0; i<Count ; i++) {
-    genderSexuality[i]=victimsTable.get(i, 2); 
-    genderCount=genderSexuality.length;
-  }
+  // genderSexuality=[]
+  // for (var i = 0; i<Count ; i++) {
+  //   genderSexuality[i]=victimsTable.get(i, 2); 
+  //   genderCount=genderSexuality.length;
+  // }
 
-  race=[]
-  for (var i = 0; i<Count ; i++) {
-    race[i]=victimsTable.get(i, 3); 
-    raceCount= race.length;
-  }
-  //unnecessary but just to check that the right number of elements is listed
-  print (yearsCount, totalCount, typeCount, genderCount, raceCount)
-  print (years, total, type, genderSexuality, race)
+  // race=[]
+  // for (var i = 0; i<Count ; i++) {
+  //   race[i]=victimsTable.get(i, 3); 
+  //   raceCount= race.length;
+  // }
+  // //unnecessary but just to check that the right number of elements is listed
+  // print (yearsCount, totalCount, typeCount, genderCount, raceCount)
+  // print (years, total, type, genderSexuality, race)
 
   for (var i = 0; i < yearlyTable.getRowCount(); i++) {
     maxTotal = max(yearlyTable.getNum(i,'TOTALSUM'), maxTotal);
