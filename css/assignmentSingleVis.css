@@ -1,0 +1,115 @@
+
+body{
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+
+/*sizes images*/
+.col-md-2{
+    width: 100%;
+    height: auto;
+    padding: 0; 
+    margin: auto;
+    display: inline;
+}
+
+#displacement {
+    width: 1em;
+    height: 1em;
+    background: rgb(135, 135, 135);
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border: .5px rgb(0,0,250);
+    border-radius: .5em;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+    stroke: ;
+}
+
+#disappearance {
+    width: 1em;
+    height: 1em;
+    background: rgb(255, 81, 0);
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+}
+
+#homicide {
+    width: 1em;
+    height: 1em;
+    background: rgb(0, 195, 200);
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+}
+
+#others {
+    width: 1em;
+    height: 1em;
+    background: rgb(255, 179, 179);
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em;
+    padding: 0;
+    margin: auto;
+    display: inline-block;
+}
+
+/* fonts and style */
+h1{
+    /*color: #800024;*/
+    color: rgb (89,89,89);
+    font-size: 1em ;
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 0;
+    font-size: 1em;
+    float: right;
+}
+
+span{
+	color: #232323;
+    text-align: right;
+    margin: .1% auto auto auto;
+}
+
+p{
+    /*color: #800024;*/
+    color: #bfbfbf;
+    font-size: .5em ;
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 0;
+    font-size: 1em;
+}
+h2{
+    color: #99999;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: left;
+    float: right;
+    margin: auto;
+    padding: 5% 5% 1% 0;
+}
+
+h3{
+    color: #99999;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: right;
+    float: right;
+    margin: auto;
+    padding: 7% 0 1% 0;
+    text-transform: uppercase;
+}
+#defaultCanvas0{
+    padding: 1% 5% 1% 16%;
+    margin: auto;
+}
