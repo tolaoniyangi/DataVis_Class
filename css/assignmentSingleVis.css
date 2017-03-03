@@ -74,21 +74,21 @@ h1{
     float: right;
 }
 
+p{
+    color: #999999;
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 0;
+    font-size: 1em;
+    text-transform: none;
+}
+
 span{
 	color: #232323;
     text-align: right;
     margin: .1% auto auto auto;
 }
 
-p{
-    /*color: #800024;*/
-    color: #bfbfbf;
-    font-size: .5em ;
-    text-align: left;
-    padding-left: 5%;
-    margin-top: 0;
-    font-size: 1em;
-}
 h2{
     color: #99999;
     font-weight: 300;
@@ -100,15 +100,24 @@ h2{
 }
 
 h3{
-    color: #99999;
+    color: #393939;
     font-weight: 300;
     font-size: 1em;
-    text-align: right;
-    float: right;
+    text-align: center;
     margin: auto;
     padding: 7% 0 1% 0;
     text-transform: uppercase;
 }
+
+span.note{
+    color: #393939;
+    text-align: center;
+    padding-left: 5%;
+    margin-top: 0;
+    font-size: .75em;
+    text-transform: none;
+}
+
 #defaultCanvas0{
     padding: 1% 5% 1% 16%;
     margin: auto;

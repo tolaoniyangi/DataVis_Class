@@ -8,7 +8,7 @@ var maxLength=550;
 // ***** Preload function ***** //
 function preload(){
     // victimsTable = loadTable('../data/ColombiaVictims_Indigenous_2000.csv', 'csv', 'header');
-    yearlyTable = loadTable('../data/ColombiaVictims_Indigenous_ByYear.csv', 'csv', 'header');
+    yearlyTable = loadTable('../data/ColombiaVictims_Indigenous_By5Years.csv', 'csv', 'header');
     console.log('Done loading table...');
 }
 
@@ -17,8 +17,8 @@ function setup() {
   // var Count=victimsTable.getRowCount();
   // print (Count) 
 
-  // var CountYearly=yearlyTable.getRowCount();
-  // print (CountYearly) 
+  var CountYearly=yearlyTable.getRowCount();
+  print (CountYearly) 
 
   // //calling out the columns to work with
   // totalYear=[]
@@ -68,8 +68,8 @@ function setup() {
   // print (years, total, type, genderSexuality, race)
 
   for (var i = 0; i < yearlyTable.getRowCount(); i++) {
-    maxTotal = max(yearlyTable.getNum(i,'TOTALSUM'), maxTotal);
-    maxLabel = max(yearlyTable.getString(i,'YEAR').length, maxLabel);
+    maxTotal = max(yearlyTable.getNum(i,0), maxTotal);
+    maxLabel = max(yearlyTable.getString(i,1).length, maxLabel);
   }
   print('Maximum total is ' + maxTotal);
   print('Maximum label length is ' + maxLabel);
@@ -77,9 +77,6 @@ function setup() {
   createCanvas(650,275);
 
 }
-
-// Move the canvas so it's inside our <div id="sketch-holder">.
-  canvas.parent('sketch-holder');
 
 function draw(){
     background(255);
