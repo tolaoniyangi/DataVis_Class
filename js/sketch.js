@@ -16,7 +16,7 @@ function preload(){
 
 // ***** Setup function ***** //
 function setup(){
-    createCanvas(800, 3000);
+    createCanvas(1000, 3000);
     textSize(12);
     console.log('Setup complete...');
     print(refugeeTable.getRowCount() + ' rows loaded...');
@@ -35,8 +35,6 @@ function createNewTable(){
     for (var i = 0; i < headers.length; i++) {
       topRefugeesTable.addColumn(headers[i]);
     }
-    // topRefugeesTable.addColumn('Country');
-    // topRefugeesTable.addColumn('Total');
     for (var i = 0; i < refugeeTable.getRowCount(); i++) {
         var totalRefugees = refugeeTable.getNum(i, 'Total');
         if (totalRefugees >= 100000) {
@@ -94,6 +92,22 @@ function drawButtons(){
     }
 }
 
+// ***** Draw Country Details function ***** //
+function drawCountryDetails(xPos,yPos){
+    textAlign(LEFT,TOP);
+    fill(0);
+    if (yPos > 105 && yPos < 885) {
+        var selectedCountry = floor((yPos - 105) / 14);
+        textSize(24);
+        text(topRefugeesTable.getString(selectedCountry, 'Country'), 750, 105);
+        textSize(12);
+        text('Refugees: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Refugees'), 0), 750, 135);
+        text('IDPs: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'IDPs'), 0), 750, 150);
+        text('Stateless: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Stateless'), 0), 750, 165);
+        text('Total: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Total'), 0), 750, 180);
+    }
+}
+
 // ***** Draw function ***** //
 function draw(){
     background(255);
@@ -101,6 +115,7 @@ function draw(){
     drawCountries(headers[selectedButton]);
     drawButtons();
     mousePosition();
+    drawCountryDetails(mouseX, mouseY);
     noStroke();
     fill(0);
     text(str(mouseX) + ', ' + str(round(mouseY)), mouseX, mouseY);
