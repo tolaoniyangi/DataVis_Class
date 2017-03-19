@@ -3,7 +3,7 @@ var refugeeTable;
 var topRefugeesTable = new p5.Table;
 var maxTotal = 0;
 var maxLabel = 0;
-var maxLength = 550;
+var maxLength = 500;
 var headers = ['Country','Refugees','Asylum-seekers','Returned refugees','IDPs','Returned IDPs','Stateless','Others of concern','Total'];
 var startChartY = 100;
 
@@ -34,8 +34,8 @@ function createNewTable(){
     for (var i = 0; i < headers.length; i++) {
       topRefugeesTable.addColumn(headers[i]);
     }
-    topRefugeesTable.addColumn('Country');
-    topRefugeesTable.addColumn('Total');
+    // topRefugeesTable.addColumn('Country');
+    // topRefugeesTable.addColumn('Total');
     for (var i = 0; i < refugeeTable.getRowCount(); i++) {
         var totalRefugees = refugeeTable.getNum(i, 'Total');
         if (totalRefugees >= 100000) {
@@ -53,6 +53,7 @@ function drawCountries(category){
     fill(0);
     noStroke();
     textAlign(LEFT, TOP);
+    textSize(12);
     //calculating maximum value
     maxTotal = 0; //**important, you should reset your maximum, otherwise it might keep the previous one
     for (var i=0; i < topRefugeesTable.getRowCount(); i++) {
@@ -66,7 +67,7 @@ function drawCountries(category){
     }
     textAlign(RIGHT, TOP);
     for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
-        text(topRefugeesTable.getString(i, 'Country'), maxLabel * 5 - 5, startChartY 14*i);
+        text(topRefugeesTable.getString(i, 'Country'), maxLabel * 5 - 5, startChartY + 14*i);
     }
 }
 
@@ -90,7 +91,7 @@ function drawButtons(){
 function draw(){
     background(255);
     // drawCountries(refugeeTable);
-    drawCountries('Asylum-seekers');
+    drawCountries('Returned refugees');
     drawButtons();
     noStroke();
     fill(0);
