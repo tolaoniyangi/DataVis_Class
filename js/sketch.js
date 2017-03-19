@@ -6,6 +6,7 @@ var maxLabel = 0;
 var maxLength = 500;
 var headers = ['Country','Refugees','Asylum-seekers','Returned refugees','IDPs','Returned IDPs','Stateless','Others of concern','Total'];
 var startChartY = 100;
+var selectedButton = 8;
 
 // ***** Preload function ***** //
 function preload(){
@@ -76,6 +77,12 @@ function drawButtons(){
     stroke(0);
     strokeWeight(1);
     for (var i = 1; i < headers.length; i++) { //***note that we are starting this loop from '1' in order to skip the first colmn that contains the country names.
+        if (i == selectedButton) { //this is for changing the color of the top button when selected 
+            fill(178,178,178);
+        }
+        else {
+            fill(229, 229, 229);
+        }
         rect(50 + i * 80, 50, 75, 20);
     }
     fill(0);
@@ -91,9 +98,69 @@ function drawButtons(){
 function draw(){
     background(255);
     // drawCountries(refugeeTable);
-    drawCountries('Returned refugees');
+    drawCountries(headers[selectedButton]);
     drawButtons();
+    mousePosition();
     noStroke();
     fill(0);
     text(str(mouseX) + ', ' + str(round(mouseY)), mouseX, mouseY);
+}
+
+// ****** MousePressed Function ****** //
+function mousePressed(){
+    if (mouseX > 130 && mouseX < 205 && mouseY > 50 && mouseY < 70) {
+        selectedButton=1;
+    }
+    if (mouseX > 210 && mouseX < 285 && mouseY > 50 && mouseY < 70) {
+        selectedButton=2;
+    }
+    if (mouseX > 290 && mouseX < 365 && mouseY > 50 && mouseY < 70) {
+        selectedButton=3;
+    }
+    if (mouseX > 370 && mouseX < 445 && mouseY > 50 && mouseY < 70) {
+        selectedButton=4;
+    }
+    if (mouseX > 450 && mouseX < 525 && mouseY > 50 && mouseY < 70) {
+        selectedButton=5;
+    }
+    if (mouseX > 530 && mouseX < 605 && mouseY > 50 && mouseY < 70) {
+        selectedButton=6;
+    }
+    if (mouseX > 610 && mouseX < 685 && mouseY > 50 && mouseY < 70) {
+        selectedButton=7;
+    }
+    if (mouseX > 690 && mouseX < 765 && mouseY > 50 && mouseY < 70) {
+        selectedButton=8;
+    }
+}
+
+// ****** Mouse Position Function ****** //
+function mousePosition(){
+    if (mouseX > 130 && mouseX <205 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 210 && mouseX <285 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 290 && mouseX < 365 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 370 && mouseX < 445 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 450 && mouseX < 525 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 530 && mouseX < 605 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 610 && mouseX < 685 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else if (mouseX > 690 && mouseX < 765 && mouseY > 50 && mouseY < 70) {
+        cursor(HAND);
+    }
+    else {
+        cursor(ARROW);
+    }
 }
