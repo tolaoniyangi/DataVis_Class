@@ -74,7 +74,7 @@ function drawButtons(){
     noFill();
     stroke(0);
     strokeWeight(1);
-    for (var i = 1; i < headers.length; i++) { //***note that we are starting this loop from '1' in order to skip the first colmn that contains the country names.
+    for (var i = 1; i < headers.length; i++) { //***note that we are starting this loop from '1' in order to skip the first column that contains the country names.
         if (i == selectedButton) { //this is for changing the color of the top button when selected 
             fill(178,178,178);
         }

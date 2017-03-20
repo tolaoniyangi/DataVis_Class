@@ -10,7 +10,7 @@ function draw(){
 	for (y = 0; y < height ; y+=10) 
 	for (x = 0; x < width ; x+=10) {
 		rect(x,y,10,10); //draws the recurring rectangles based on x & y that were defined earlier 
-	 	//does the fill of the rectang;es to be a gradient rainbow 
+	 	//does the fill of the rectangles to be a gradient rainbow 
 	  	var ratio = x/width;
 	  	var hue = ratio;
 	 	for (var i = y ; i <= height; i++) {
