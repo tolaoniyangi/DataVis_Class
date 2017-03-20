@@ -1,13 +1,6 @@
-//variables: gotta have an empty one for the squares??? 
-//function: create a big square and then split it up into a bunch of different squares that are super tiny OR should it be a bunch of cells in a table 
-//and then another function for the colors --> if x then y, so the colors are in the circle 
-//orrrr as it goes left to right, rainbow and goes up to down 
-//draw it 
-//loop within a loop
-
 function setup(){
 	createCanvas(400, 400);
-	colorMode(HSB, 1);
+	colorMode(HSB,1);
 }
 
 function draw(){
@@ -16,12 +9,17 @@ function draw(){
 	var y = 10;
 	for (y = 0; y < height ; y+=10) 
 	for (x = 0; x < width ; x+=10) {
-	rect(x,y,10,10); //draws the recurring rectangles based on x & y that were defined earlier 
-  	//does the fill to be a gradient rainbow 
-  	var ratio = x/height;
-  	var hue = ratio;
-  	var saturation = 1;
-  	var brightness = 1;
-  	fill(hue, saturation, brightness );
-  }
+		rect(x,y,10,10); //draws the recurring rectangles based on x & y that were defined earlier 
+	 //does the fill to be a gradient rainbow 
+	  	var ratio = x/width;
+	  	var hue = ratio;
+	  	var saturation = 1;
+	  	var brightness = 1;
+	 
+		for (var i = y; i <= height; i++) {
+		    var alpha = map(i, y, y+height, 0, 1); //figure out how to switch this from mapping to black to mapping from low to high opacity + why the cell in the top left corner is going to black
+	    }
+	    //1 is fully transparent, 0 is fully opaque
+	  	fill(hue, saturation, brightness, alpha);
+    } 
 }
