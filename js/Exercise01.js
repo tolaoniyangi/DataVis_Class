@@ -7,13 +7,16 @@
 
 
 function setup(){
-	createCanvas(1000, 3000);
+	createCanvas(800, 500);
 }
 
 function draw(){
-	// var cellColor = color('hsb(160, 100%, 50%)'); //here, define the cellColor from cell position or other value (if, else) 
-	// fill(cellColor);
-
+	background(0);
+	var cellColor = color('hsb(160, 100%, 50%)'); //here, define the cellColor from cell position or other value (if, else) 
+	fill(cellColor);
+	var y = 50;
+	for (y = 0; y < height ; y+=50) 
+	for (x = 0; x < width ; x+=50) {
+		rect(x,y,50,50)
+	}
 }
-
-//divide square into cells? 
