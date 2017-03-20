@@ -93,7 +93,7 @@ function drawButtons(){
 }
 
 // ***** Draw Country Details function ***** //
-function drawCountryDetails(xPos,yPos){
+function drawCountryDetails(xPos,yPos){ //xpos, ypos talks about the mouse
     textAlign(LEFT,TOP);
     fill(0);
     if (yPos > 105 && yPos < 885) {
