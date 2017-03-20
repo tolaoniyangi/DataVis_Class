@@ -13,13 +13,10 @@ function draw(){
 	 //does the fill to be a gradient rainbow 
 	  	var ratio = x/width;
 	  	var hue = ratio;
-	  	var saturation = 1;
-	  	var brightness = 1;
-	 
-		for (var i = y; i <= height; i++) {
-		    var alpha = map(i, y, y+height, 0, 1); //figure out how to switch this from mapping to black to mapping from low to high opacity + why the cell in the top left corner is going to black
+	 	for (var i = y; i <= height; i++) {
+		    var saturation = map(i, y, y+height, 1, 0); //figure out why the cell in the top left corner is going to black
 	    }
-	    //1 is fully transparent, 0 is fully opaque
-	  	fill(hue, saturation, brightness, alpha);
+		var brightness = 1;
+	  	fill(hue, saturation, brightness);
     } 
 }
