@@ -16,18 +16,18 @@ function loadJSON(url,callback){
         stationInfoRequest.onreadystatechange=function(){
         if (stationInfoRequest.readyState ==4 && stationInfoRequest.status == "200") {
             callback(stationInfoRequest.responseText);
-        }
+        } //so the problem is that it keeps bringing it out as undefined values so fuck this shit 
     };
     stationInfoRequest.send(null); //sends the request 
     
     
-    // var stationStatusRequest=new XMLHttpRequest();
-    // stationStatusRequest.open('GET', 'https://gbfs.citibikenyc.com/gbfs/en/station_status.json');
-    // stationStatusRequest.onload=function(){
-    //     var stationStatusData=JSON.parse(stationStatusRequest.responseText);
-    //     console.log(stationStatusData);
-    // }
-    // stationStatusRequest.send();
+    var stationStatusRequest=new XMLHttpRequest();
+    stationStatusRequest.open('GET', 'https://gbfs.citibikenyc.com/gbfs/en/station_status.json');
+    stationStatusRequest.onload=function(){
+        var stationStatusData=JSON.parse(stationStatusRequest.responseText);
+        console.log(stationStatusData);
+    }
+    stationStatusRequest.send();
 }
 
 function init(){
