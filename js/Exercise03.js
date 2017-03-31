@@ -16,10 +16,18 @@ function setup(){
     button.mousePressed(queryAPI); //linking queryAPI to the button 
 }
 
+// function keyPressed() {
+//   if (keyCode === ENTER) {
+//     function(queryAPI)();
+//   } 
+// }
+
 function getWeatherData(apiData){
     weatherData = apiData;
     temperature = weatherData.main.temp;
     humidity = weatherData.main.humidity;
+    windSpeed=weatherData.wind.speed;
+    city=weatherData.name;
     console.log(weatherData);
 }
 
@@ -33,8 +41,39 @@ function draw(){
     background(255); //so it erases everything 
     fill(0);
     noStroke();
+    createCanvas(200,200);
     // console.log(weatherData); -- if this is in the draw function, it loops over and over again so have it in the getweatherdata function
     if (weatherData){ //if weatherData is true then draw. f it is undefined don't draw
-        ellipse (200,200, temperature * 10, temperature * 10)
+        // document.writeln('City: ' + city); //gives a popup alert in the window basically 
+        // document.write('Temperature: ' + temperature);
+        // document.write('Humidity: ' + humidity);
+        // document.write('Wind Speed: ' + windSpeed);
     }
+}
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('city').value; //now linked to previous search box that also does weather query
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === 'OK') {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
 }

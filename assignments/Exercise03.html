@@ -15,13 +15,28 @@
     <!-- Link to p5 sketch file - this is actually where we write the javascript-->
     <script language="javascript" type="text/javascript" src="../js/Exercise03.js"></script>
   </head>
+ 
   <body>
+<!-- sorting out the search -->
     <p> 
       <div class = input>
-      Query the OpenWeatherMap API for: 
-      <input id='city' value=''> </input>
-      <button id='submit'> Search </button>
-    </div>
+        Find out the weather in: 
+        <input id='city' id='address' type='textbox' value=''> </input>
+        <!-- <input id='city' type='textbox' value=''> </input> -->
+        <button id='submit'> Search </button>
+      </div>
     </p>
+<!-- embedding map -->
+   <!--  <div id="floating-panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="submit" type="button" value="Geocode">
+    </div> -->
+
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVS6rKIbsDWDuHxxU0v0bqwoNDKVQEGDM&callback=initMap">
+    </script>
+
   </body>
 </html>
+
