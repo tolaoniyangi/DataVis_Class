@@ -56,7 +56,14 @@ div.title{
 }
 
 
-.input p{
+h1{
+    font-family: 'Roboto', helvetica, sans-serif;
+    background-color: #fff; 
+    color: #808080;
+    border-radius: .75em;
+    border: 1px solid #808080;
+    padding: 0.5% 1% 0.5% 1% ; /*top right bottom left */
     text-align: center;
-    width: 10%;
+    font-size: .75em;
+    font-weight: 800;
 }
