@@ -10,7 +10,6 @@ var button;
 
 //**** Setup function ***//
 function setup(){
-    // createCanvas(800,800);
     noCanvas();
     button = select ('#submit'); //# represents the id of the button 
     city = select ('#city');
@@ -29,11 +28,12 @@ function getWeatherData(apiData){
     humidity = weatherData.main.humidity;
     windSpeed=weatherData.wind.speed;
     cityName=weatherData.name;
-    console.log(weatherData);
-    createElement('h1', 'City: ' + cityName);
-    createElement('h1', 'Temperature: ' + temperature)
-    createElement('h1', 'Humidity: ' + humidity)
-    createElement('h1', 'Wind Speed: ' + windSpeed)
+    // console.log(weatherData);
+    createElement('h1', 'City: ' + cityName ; break element;'Temperature: ' + temperature); //h1 is the id, this prints to screen 
+    // createElement('h1', 'Temperature: ' + temperature)
+    // createElement('h1', 'Humidity: ' + humidity)
+    // createElement('h1', 'Wind Speed: ' + windSpeed)
+
 }
 
 function queryAPI(){ //building the url and loading the json in this function 
@@ -41,25 +41,14 @@ function queryAPI(){ //building the url and loading the json in this function
     loadJSON(query, getWeatherData); //once you've loaded the query, then do this: get weather data
 }
 
-
-//*** Draw function ***// 
-// function draw(){
-//     background(255); //so it erases everything 
-//     fill(0);
-//     noStroke();
-//     createCanvas(200,200);
-//     if (weatherData){ //if weatherData is true then draw. f it is undefined don't draw
-//         document.writeln('City: ' + city); //gives a popup alert in the window basically 
-//         document.write('Temperature: ' + temperature);
-//         document.write('Humidity: ' + humidity);
-//         print('Wind Speed: ' + windSpeed);
-//     }
-// }
-
+function draw(){
+    background(255);
+}
+// adding google maps
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
+    center: {lat: 40.705, lng: -74.258188}
   });
   var geocoder = new google.maps.Geocoder();
 
