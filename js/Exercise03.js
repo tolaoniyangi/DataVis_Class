@@ -29,11 +29,7 @@ function getWeatherData(apiData){
     windSpeed=weatherData.wind.speed;
     cityName=weatherData.name;
     // console.log(weatherData);
-    createElement('h1', 'City: ' + cityName ; break element;'Temperature: ' + temperature); //h1 is the id, this prints to screen 
-    // createElement('h1', 'Temperature: ' + temperature)
-    // createElement('h1', 'Humidity: ' + humidity)
-    // createElement('h1', 'Wind Speed: ' + windSpeed)
-
+    createElement('h1', 'City:' + cityName + '</br>Temperature: ' + temperature + '</br> Humidity: ' + humidity + '</br>Wind Speed: ' + windSpeed); //h1 is the id, this prints to screen 
 }
 
 function queryAPI(){ //building the url and loading the json in this function 
