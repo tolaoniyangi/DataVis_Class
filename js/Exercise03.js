@@ -16,20 +16,12 @@ function setup(){
     button.mousePressed(queryAPI); //linking queryAPI to the button 
 }
 
-// function keyPressed() {
-//   if (keyCode === ENTER) {
-//     function(queryAPI)();
-//   } 
-// }
-
 function getWeatherData(apiData){
     weatherData = apiData;
     temperature = weatherData.main.temp;
     humidity = weatherData.main.humidity;
     windSpeed=weatherData.wind.speed;
     cityName=weatherData.name;
-    // console.log(weatherData);
-        noLoop();
     createElement('h1', 'CITY: ' + cityName + '</br></br>TEMPERATURE: ' + temperature + 'C' + '</br></br>HUMIDITY: ' + humidity + '</br></br>WIND SPEED: ' + windSpeed); //h1 is the id, this prints to screen 
 }
 
