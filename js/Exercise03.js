@@ -29,7 +29,8 @@ function getWeatherData(apiData){
     windSpeed=weatherData.wind.speed;
     cityName=weatherData.name;
     // console.log(weatherData);
-    createElement('h1', 'City:' + cityName + '</br>Temperature: ' + temperature + '</br> Humidity: ' + humidity + '</br>Wind Speed: ' + windSpeed); //h1 is the id, this prints to screen 
+        noLoop();
+    createElement('h1', 'CITY: ' + cityName + '</br></br>TEMPERATURE: ' + temperature + 'C' + '</br></br>HUMIDITY: ' + humidity + '</br></br>WIND SPEED: ' + windSpeed); //h1 is the id, this prints to screen 
 }
 
 function queryAPI(){ //building the url and loading the json in this function 
@@ -37,9 +38,6 @@ function queryAPI(){ //building the url and loading the json in this function
     loadJSON(query, getWeatherData); //once you've loaded the query, then do this: get weather data
 }
 
-function draw(){
-    background(255);
-}
 // adding google maps
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
