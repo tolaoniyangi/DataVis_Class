@@ -9,12 +9,16 @@ var humidity = 0;
 var button;
 var iconRain = [];
 var iconWind = [];
-var canvas;
+var canvasRain;
+var canvasWind;
 
 function preload(){
   iconRain[0]=loadImage("../img/nature.jpg"); //max humidity 
   iconRain[1]=loadImage("../img/netherlands.jpg"); //med humidity 
   iconRain[2]=loadImage("../img/censorship.jpg"); //low humidity 
+  iconWind[0]=loadImage("../img/nature.jpg"); //low humidity 
+  iconWind[1]=loadImage("../img/netherlands.jpg"); //low humidity 
+  iconWind[2]=loadImage("../img/censorship.jpg"); //low humidity 
 }
 
 //**** Setup function ***//
@@ -22,7 +26,7 @@ function setup(){
   button = select ('#submit'); //# represents the id of the button 
   city = select ('#city');
   button.mousePressed(queryAPI); //linking queryAPI to the button
-  // noLoop();
+  // createCanvas(800,800);
 }
 
 function getWeatherData(apiData){
@@ -34,14 +38,17 @@ function getWeatherData(apiData){
   createElement('h1', 'CITY: ' + cityName + '</br></br>TEMPERATURE: ' + temperature + 'C' + '</br></br>HUMIDITY: ' + humidity + '%' + '</br></br>WIND SPEED: ' + windSpeed + 'mph'); //h1 is the id, this prints to screen 
     
   //drawing the icons 
-  // createCanvas(200,200);
+  // var canvas = createCanvas(800,800);
+  // canvas.position(100,150);
 
-  var canvas=createCanvas(200,200);
-  canvas.position(100,120);
+
+  //HUMIDITY 
+  var canvasHumidity=createCanvas(200,200);
+  canvasHumidity.position(100,150);
   h1=createElement('h1', 'HUMIDITY: ' + humidity + '%')
   h1.position(100,100);
 
-  background(255); //so it erases everything 
+  canvasHumidity.background(0); //so it erases everything 
     fill(0);
     noStroke();
 
@@ -56,6 +63,29 @@ function getWeatherData(apiData){
 
   if (humidity < 50){
     image(iconRain[2], 0, 0);
+  }
+
+  //WIND 
+  var canvasWind=createCanvas(250,200);
+  canvasWind.position(300,150);
+  h1=createElement('h1', 'WIND SPEED: ' + windSpeed + ' mph')
+  h1.position(300,100);
+
+  canvasWind.background(0); //so it erases everything 
+    fill(0);
+    noStroke();
+
+  if (windSpeed >= 1.5){
+    canvasWind.image(iconWind[0], 0, 0);
+    // subtitle=createElement('p', "Feels like rain")
+  };
+
+  if (windSpeed <= 1.5){
+    canvasWind.image(iconWind[1], 0, 0);
+  };
+
+  if (windSpeed < 0.5){
+    canvasWind.image(iconWind[2], 0, 0);
   }
 }
 
