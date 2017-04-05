@@ -7,16 +7,20 @@ var weatherData;
 var temperature = 0;
 var humidity = 0;
 var button;
-var img;
+var icon = [];
+
+function preload(){
+  icon[0]= loadImage("../img/nature.jpg"); 
+  icon[1]=loadImage("../img/netherlands.jpg");
+}
 
 //**** Setup function ***//
 function setup(){
     createCanvas(720,400);
     button = select ('#submit'); //# represents the id of the button 
     city = select ('#city');
-    button.mousePressed(queryAPI); //linking queryAPI to the button 
-        img = loadImage("../img/nature.jpg"); 
-
+    button.mousePressed(queryAPI); //linking queryAPI to the button
+    noLoop();
 }
 
 function getWeatherData(apiData){
@@ -26,12 +30,9 @@ function getWeatherData(apiData){
     windSpeed=weatherData.wind.speed;
     cityName=weatherData.name;
     createElement('h1', 'CITY: ' + cityName + '</br></br>TEMPERATURE: ' + temperature + 'C' + '</br></br>HUMIDITY: ' + humidity + '%' + '</br></br>WIND SPEED: ' + windSpeed + 'mph'); //h1 is the id, this prints to screen 
-// for (var i = 0; i < 400; i++) {
-//     var img = document.createElement("img");    
-//   };
-  // if (humidity > 50) {
-    // img = loadImage("../img/nature.jpg"); 
-  // };
+    if (humidity>50) {
+    image(icon[0], 0, 0);
+  };
 }
 
 function queryAPI(){ //building the url and loading the json in this function 
@@ -39,6 +40,9 @@ function queryAPI(){ //building the url and loading the json in this function
   loadJSON(query, getWeatherData); //once you've loaded the query, then do this: get weather data
 }
 
-function draw(){
-  image(img, 0, 0);
+function draw(queryAPI){
+  // if (humidity>50) {
+  //   image(icon[0], 0, 0);
+  // };
+  
 }
