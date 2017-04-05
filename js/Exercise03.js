@@ -43,7 +43,7 @@ function queryAPI(){ //building the url and loading the json in this function
 
 function draw(){
   var canvas=createCanvas(800,800);
-  canvas.position(100,100);
+  canvas.position(150,250);//left, top
   canvas.background(255); //so it erases everything 
     fill(0);
     noStroke();
@@ -51,14 +51,17 @@ function draw(){
   //drawing the sketch 
   if(weatherData){ //need this if loop so it only works when there is values for the data 
     //CITY NAME + temp 
-    headingCity=createElement('h1', cityName)
-    headingCity.position(50,10); //y, x 
+    headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
+    headingCity.position(300,300); //y, x 
 
-    headingTemp=createElement ('h2', 'TEMPERATURE: ' + temperature + 'C' )
-    headingTemp.position(50,40);
+    numberTemp=createElement ('h2', temperature + 'C' )
+    numberTemp.position(400,400);
+
+    headingTemp=createElement ('h3', 'TEMPERATURE')
+    headingTemp.position(500,500);
 
     // WIND icon + text 
-    headingWeather=createElement('h3', 'WIND SPEED: ' + windSpeed + 'mph')
+    headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'mph')
     headingWeather.position(100,100);
 
     if (windSpeed >= 1.5){
