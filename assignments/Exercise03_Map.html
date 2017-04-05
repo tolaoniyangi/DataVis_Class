@@ -21,10 +21,20 @@
     <p> 
       <div class = input>
         Find out about weather in: 
-        <input id='city' type='textbox' value='New York'> </input>
+        <input id='city' id='address' type='textbox' value='New York'> </input>
         <button id='submit'> Search </button>
       </div>
     </p>
+<!-- embedding map -->
+   <!--  <div id="floating-panel">
+      <input id="address" type="textbox" value="New York, NY">
+      <input id="submit" type="button" value="Geocode">
+    </div> -->
+
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVS6rKIbsDWDuHxxU0v0bqwoNDKVQEGDM&callback=initMap">
+    </script>
 
   </body>
 </html>
