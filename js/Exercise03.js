@@ -52,13 +52,13 @@ function draw(){
   if(weatherData){ //need this if loop so it only works when there is values for the data 
     //CITY NAME + temp 
     headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
-    headingCity.position(300,300); //y, x 
+    headingCity.position(200,200); //y, x 
 
     numberTemp=createElement ('h2', temperature + 'C' )
-    numberTemp.position(400,400);
+    numberTemp.position(150,200);
 
     headingTemp=createElement ('h3', 'TEMPERATURE')
-    headingTemp.position(500,500);
+    headingTemp.position(150,150);
 
     // WIND icon + text 
     headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'mph')
@@ -86,12 +86,12 @@ function draw(){
       // subtitle=createElement('p', "Feels like rain")
     };
 
-      if (humidity >= 50){
-        image(iconRain[1], 300, 50);
-      };
+    if (humidity >= 50){
+      image(iconRain[1], 300, 50);
+    };
 
-      if (humidity < 50){
-        image(iconRain[2], 300, 50);
-      }
+    if (humidity < 50){
+      image(iconRain[2], 300, 50);
+    }
   }
 }
