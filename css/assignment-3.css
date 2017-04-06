@@ -51,12 +51,12 @@ p#intro{
 h1{
   font-family: 'Roboto', helvetica, sans-serif;
   background-color: transparent;
-  color: #2F4F4F;
+  color: #696969;
   padding: 2% 1% 2% 1.5%;
-  font-size: 1.8em;
+  font-size: 1em;
   text-transform: uppercase;
   /*position: fixed;*/
-  text-align: left;
+  text-align: center;
   margin-left: 1%;
 }
 
@@ -64,30 +64,29 @@ h1{
 h2{
   font-family: 'Roboto Condensed', helvetica, sans-serif;
   background-color: transparent;
-  font-weight: 600;
-  color: #2F4F4F;
+  color: #696969;
   padding: 2% 1% 2% 1.5%;
-  font-size: 2.4em;
+  font-size: 4em;
   /*position: fixed;*/
-  text-align: left;
+  text-align: right;
   margin-left: 1%;
 }
 
-/* Temperature Text */
+/* Temperature Text/heading */
 h3{
   font-family: 'Roboto', helvetica, sans-serif;
   background-color: transparent;
   font-weight: 300;
-  color: #2F4F4F;
+  color: #696969;
   padding: 2% 1% 2% 1.5%;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: .8em;
   /*position: fixed;*/
-  text-align: left;
+  text-align: right;
   margin-left: 1%;
 }
 
-/* What to wear */
+/* What to wear / about the weather */
 h4{
   font-family: 'Roboto Condensed', helvetica, sans-serif;
   background-color: transparent;
@@ -96,7 +95,7 @@ h4{
   padding: 2% 1% 2% 1.5%;
   font-size: 1.2em;
   /*position: fixed;*/
-  text-align: center;
+  text-align: left;
   width: 25%;
   margin-left: 1%;
 }

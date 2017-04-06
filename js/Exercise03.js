@@ -10,8 +10,7 @@ var windSpeed = 0;
 var cityName=0; 
 var clouds = 0;
 var button;
-var iconRain = [];
-var iconWind = [];
+var sunny = [];
 
 function preload(){
   sunny[0]=loadImage("../img/summerWsunglasses.png"); //sunny
@@ -44,7 +43,7 @@ function queryAPI(){ //building the url and loading the json in this function
 }
 
 function draw(){
-  var canvas=createCanvas(800,800);
+  var canvas=createCanvas(800,800); //x, y
   canvas.position(150,250);//left, top
   canvas.background(255); //so it erases everything 
     fill(0);
@@ -52,25 +51,30 @@ function draw(){
   
   //drawing the sketch 
   if(weatherData){ //need this if loop so it only works when there is values for the data 
-    //CITY NAME + temp 
-    // headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
-    // headingCity.position(200,200); //y, x 
+    // CITY NAME + temp 
+    headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
+    headingCity.position(500,250); //x, y ; comes first 
 
-    // numberTemp=createElement ('h2', temperature + 'C' )
-    // numberTemp.position(150,200);
+    numberTemp=createElement ('h2', temperature + 'C' ) //middle, large 
+    numberTemp.position(500,220);
 
-    // headingTemp=createElement ('h3', 'TEMPERATURE')
-    // headingTemp.position(150,150);
+    headingTemp=createElement ('h3', 'TEMPERATURE') //right under the actual temperatire reading 
+    headingTemp.position(500,330);
 
-    // textClouds=createElement ('h3', 'CLOUDS' + clouds + '%')
-    // textClouds.position(160,160);
+    //CLOUDS 
+    textClouds=createElement ('h3', 'CLOUDS: ' + clouds + '%')
+    textClouds.position(160,160);
 
-    // // WIND icon + text 
-    // headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'm/s')
-    // headingWeather.position(100,100);
+    // WIND icon + text 
+    headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'm/s')
+    headingWeather.position(100,100);
+
+    //HUMIDITY
+    headingWeather=createElement('h3', 'HUMIDITY: ' + humidity + '%')
+    headingWeather.position(400,100);
 
     if (humidity >= 75 && clouds >= 75){
-      image(rainy, 50, 50); //50,50 indicates the position of the image on the screen
+      image(rainy, 0, 0); //50,50 indicates the position of the image on the screen
       subtitle=createElement('h4', "Looks like it's gonna rain today. Don't forget your umbrella! ")//rain gear 
       subtitle.position(500,160); //x,y position
     };
@@ -105,30 +109,5 @@ function draw(){
       subtitle.position(100,100);
     };
 
-  //   if (windSpeed <= 1.5){
-  //     image(iconWind[1], 50, 50);
-  //   };
-
-  //   if (windSpeed < 0.5){
-  //     image(iconWind[2], 50, 50);
-  //   }
-
-  //   //HUMIDITY
-  //   headingWeather=createElement('h3', 'HUMIDITY: ' + humidity + '%')
-  //   headingWeather.position(400,100);
-
-  //   if (humidity >= 75){
-  //     image(iconRain[0], 50, 50);
-  //     subtitle=createElement('p', "Feels like rain");
-  //     subtitle.position(150,150);
-  //   };
-
-  //   if (humidity >= 50){
-  //     image(iconRain[1], 50, 50);
-  //   };
-
-  //   if (humidity < 50){
-  //     image(iconRain[2], 50, 50);
-  //   }
   }
 }
