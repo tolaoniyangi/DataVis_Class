@@ -19,6 +19,9 @@ function preload(){
   rainy=loadImage("../img/rainyday.png"); 
   spring=loadImage("../img/feelslikespring.png"); 
   fall=loadImage("../img/fall_dressing.png"); 
+  fallwinter=loadImage("../img/fallwinter.png"); 
+  summersummer=loadImage("../img/summersummer.png"); 
+  averageweather=loadImage("../img/averageweather.png");  
 }
 
 //**** Setup function ***//
