@@ -86,6 +86,16 @@ h3{
   margin-left: 1%;
 }
 
+/* Wind/clouds/humidity text + readings */
+h5{
+  background-color: transparent;
+  color: #696969;
+  padding: 2% 1% 2% 1.5%;
+  font-size: 1.1em;
+  text-align: right;
+  margin-left: 1%;
+}
+
 /* What to wear / about the weather */
 h4{
   font-family: 'Roboto Condensed', helvetica, sans-serif;
