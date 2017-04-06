@@ -44,7 +44,7 @@ function queryAPI(){ //building the url and loading the json in this function
 
 function draw(){
   var canvas=createCanvas(800,800); //x, y
-  canvas.position(150,250);//left, top
+  canvas.position(150,200);//left, top
   canvas.background(255); //so it erases everything 
     fill(0);
     noStroke();
@@ -111,8 +111,29 @@ function draw(){
       subtitle=createElement('h4', "It's cold today - bundle up.") //winter clothes eg northface 
       subtitle.position(500,160);
     }
+    //general
+    else if (temperature <=5){
+      image(winter, 0, 0);
+      subtitle=createElement('h4', "It's cold today - bundle up.") //winter clothes eg northface 
+      subtitle.position(500,160);
+    }
+
+    else if (temperature <= 12 && temperature > 5){
+      image(fallwinter, 0, 0);
+      subtitle=createElement('h4', "It's a bit chilly today ") //winter clothes eg northface 
+      subtitle.position(500,160);
+    }
+
+    else if (temperature < 18 && temperature > 12){
+      image(averageweather, 0, 0);
+      subtitle=createElement('h4', "It's not too hot, not too cold. Enjoy!") //winter clothes eg northface 
+      subtitle.position(500,160);
+    }
+
+    else if (temperature >= 18){
+      image(summersummer, 0, 0);
+      subtitle=createElement('h4', "HOT HOT HOT today") //winter clothes eg northface 
+      subtitle.position(500,160);
+    }
   }
 }
-// function mousePressed(){
-//   remove()
-// }
