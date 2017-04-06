@@ -8,6 +8,7 @@ var temperature = 0;
 var humidity = 0;
 var windSpeed = 0;
 var cityName=0; 
+var clouds = 0;
 var button;
 var iconRain = [];
 var iconWind = [];
@@ -33,6 +34,7 @@ function getWeatherData(apiData){
   temperature = weatherData.main.temp;
   humidity = weatherData.main.humidity;
   windSpeed = weatherData.wind.speed;
+  clouds = weatherData.clouds.all;
   cityName = weatherData.name;
 }
 
@@ -51,47 +53,82 @@ function draw(){
   //drawing the sketch 
   if(weatherData){ //need this if loop so it only works when there is values for the data 
     //CITY NAME + temp 
-    headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
-    headingCity.position(200,200); //y, x 
+    // headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
+    // headingCity.position(200,200); //y, x 
 
-    numberTemp=createElement ('h2', temperature + 'C' )
-    numberTemp.position(150,200);
+    // numberTemp=createElement ('h2', temperature + 'C' )
+    // numberTemp.position(150,200);
 
-    headingTemp=createElement ('h3', 'TEMPERATURE')
-    headingTemp.position(150,150);
+    // headingTemp=createElement ('h3', 'TEMPERATURE')
+    // headingTemp.position(150,150);
 
-    // WIND icon + text 
-    headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'mph')
-    headingWeather.position(100,100);
+    // textClouds=createElement ('h3', 'CLOUDS' + clouds + '%')
+    // textClouds.position(160,160);
 
-    if (windSpeed >= 1.5){
+    // // WIND icon + text 
+    // headingWeather=createElement('h4', 'WIND SPEED: ' + windSpeed + 'm/s')
+    // headingWeather.position(100,100);
+
+    if (humidity >= 75 && clouds >= 75){
+      image(iconWind[0], 50, 50); //50,50 indicates the position of the image on the screen
+      subtitle=createElement('h4', "Looks like it's gonna rain today. Don't forget your umbrella! ")//rain gear 
+      subtitle.position(500,160); //x,y position
+    };
+
+    if (windSpeed < 6.7 && temperature >= 18 && clouds <= 50){
       image(iconWind[0], 50, 50);
-      // subtitle=createElement('p', "Feels like rain")
+      subtitle=createElement('h4', "It's beautiful today. Don't forget your sunglasses!") //sundress/shorts + sunglasses
+      subtitle.position(100,100);
     };
 
-    if (windSpeed <= 1.5){
-      image(iconWind[1], 50, 50);
+    if (windSpeed < 6.7 && temperature >= 18 && clouds > 50){
+      image(iconWind[0], 50, 50);
+      subtitle=createElement('h4', "It's warm and nice today, although a bit cloudy.") //sundress/shorts 
+      subtitle.position(100,100);
     };
 
-    if (windSpeed < 0.5){
-      image(iconWind[2], 50, 50);
-    }
-
-    //HUMIDITY
-    headingWeather=createElement('h3', 'HUMIDITY: ' + humidity + '%')
-    headingWeather.position(400,100);
-
-    if (humidity >= 75){
-      image(iconRain[0], 300, 50);
-      // subtitle=createElement('p', "Feels like rain")
+    if (windSpeed < 6.7 && temperature >= 12 && temperature < 18){
+      image(iconWind[0], 50, 50);
+      subtitle=createElement('h4', "The weather is pretty amazing today - not too hot, not too cold.") //jeans + light sweater 
+      subtitle.position(100,100);
     };
 
-    if (humidity >= 50){
-      image(iconRain[1], 300, 50);
+    if (windSpeed >= 11.2 && humidity < 25 && clouds >= 75 && temperature <= 5){
+      image(iconWind[0], 50, 50);
+      subtitle=createElement('h4', "Feels like spring!") //parka/spring outfit 
+      subtitle.position(100,100);
     };
 
-    if (humidity < 50){
-      image(iconRain[2], 300, 50);
-    }
+    if (windSpeed >= 6.7 && windSpeed < 11.2 && humidity >= 75 && clouds >= 75 && temperature <= 5){
+      image(iconWind[0], 50, 50);
+      subtitle=createElement('h4', "It's cold today - bundle up.") //winter clothes eg northface 
+      subtitle.position(100,100);
+    };
+
+  //   if (windSpeed <= 1.5){
+  //     image(iconWind[1], 50, 50);
+  //   };
+
+  //   if (windSpeed < 0.5){
+  //     image(iconWind[2], 50, 50);
+  //   }
+
+  //   //HUMIDITY
+  //   headingWeather=createElement('h3', 'HUMIDITY: ' + humidity + '%')
+  //   headingWeather.position(400,100);
+
+  //   if (humidity >= 75){
+  //     image(iconRain[0], 50, 50);
+  //     subtitle=createElement('p', "Feels like rain");
+  //     subtitle.position(150,150);
+  //   };
+
+  //   if (humidity >= 50){
+  //     image(iconRain[1], 50, 50);
+  //   };
+
+  //   if (humidity < 50){
+  //     image(iconRain[2], 50, 50);
+  //   }
   }
 }

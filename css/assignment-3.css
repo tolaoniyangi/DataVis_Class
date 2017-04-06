@@ -87,15 +87,16 @@ h3{
   margin-left: 1%;
 }
 
-/* Wind/Humidity Text*/
+/* What to wear */
 h4{
   font-family: 'Roboto Condensed', helvetica, sans-serif;
   background-color: transparent;
   font-weight: 300;
-  color: #2F4F4F;
+  color: #800080;
   padding: 2% 1% 2% 1.5%;
   font-size: 1.2em;
   /*position: fixed;*/
-  text-align: left;
+  text-align: center;
+  width: 25%;
   margin-left: 1%;
 }
