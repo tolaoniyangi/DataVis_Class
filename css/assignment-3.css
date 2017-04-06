@@ -12,6 +12,7 @@ body{
   background-color: #f2f2f2;
   text-align: center;
   color: #4D4D4D;
+  /*display: inline-block;*/
 }
 
 /*where you type in the city for the search bar*/
@@ -24,23 +25,26 @@ input#city{
 
 /*styling for the search button*/
 button#submit{
-    font-family: 'Roboto', helvetica, sans-serif;
-    background-color: #fff; 
-    color: #808080;
-    border-radius: .2em;
-    border: 1px solid #808080;
-    padding: 0.5% 1% 0.5% 1% ; /*top right bottom left */
-    text-align: center;
-    font-size: .75em;
-    font-weight: 800;
-    text-align: center;
+  font-family: 'Roboto', helvetica, sans-serif;
+  background-color: #fff; 
+  color: #808080;
+  border-radius: .2em;
+  border: 1px solid #808080;
+  padding: 0.5% 1% 0.5% 1% ; /*top right bottom left */
+  text-align: center;
+  font-size: .75em;
+  font-weight: 800;
+  text-align: center;
 }
 
 /*for the introductory text */
 p#intro{
-  font-family: 'Roboto', helvetica, sans-serif;
   background-color: transparent;
   font-size: 1.8em;
+  padding: 1%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }
 
 /*City Name */

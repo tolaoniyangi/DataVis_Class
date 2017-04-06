@@ -13,12 +13,12 @@ var iconRain = [];
 var iconWind = [];
 
 function preload(){
-  iconRain[0]=loadImage("../img/nature.jpg"); //max humidity 
-  iconRain[1]=loadImage("../img/netherlands.jpg"); //med humidity 
-  iconRain[2]=loadImage("../img/censorship.jpg"); //low humidity 
-  iconWind[0]=loadImage("../img/nature.jpg"); //low humidity 
-  iconWind[1]=loadImage("../img/netherlands.jpg"); //low humidity 
-  iconWind[2]=loadImage("../img/censorship.jpg"); //low humidity 
+  iconRain[0]=loadImage("../img/heavyrain.png"); //max humidity 
+  iconRain[1]=loadImage("../img/slightrain.png"); //med humidity 
+  iconRain[2]=loadImage("../img/norain.png"); //low humidity 
+  iconWind[0]=loadImage("../img/nature.jpg"); 
+  iconWind[1]=loadImage("../img/netherlands.jpg"); 
+  iconWind[2]=loadImage("../img/slightwind.png"); 
 }
 
 //**** Setup function ***//
