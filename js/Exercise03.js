@@ -14,12 +14,12 @@ var iconRain = [];
 var iconWind = [];
 
 function preload(){
-  iconRain[0]=loadImage("../img/heavyrain.png"); //max humidity 
-  iconRain[1]=loadImage("../img/slightrain.png"); //med humidity 
-  iconRain[2]=loadImage("../img/norain.png"); //low humidity 
-  iconWind[0]=loadImage("../img/nature.jpg"); 
-  iconWind[1]=loadImage("../img/netherlands.jpg"); 
-  iconWind[2]=loadImage("../img/slightwind.png"); 
+  sunny[0]=loadImage("../img/summerWsunglasses.png"); //sunny
+  sunny[1]=loadImage("../img/sunny2.png"); //sunny+cloudy
+  winter=loadImage("../img/winter_bundledup.png"); 
+  rainy=loadImage("../img/rainyday.png"); 
+  spring=loadImage("../img/feelslikespring.png"); 
+  fall=loadImage("../img/fall_dressing.png"); 
 }
 
 //**** Setup function ***//
@@ -70,37 +70,37 @@ function draw(){
     // headingWeather.position(100,100);
 
     if (humidity >= 75 && clouds >= 75){
-      image(iconWind[0], 50, 50); //50,50 indicates the position of the image on the screen
+      image(rainy, 50, 50); //50,50 indicates the position of the image on the screen
       subtitle=createElement('h4', "Looks like it's gonna rain today. Don't forget your umbrella! ")//rain gear 
       subtitle.position(500,160); //x,y position
     };
 
     if (windSpeed < 6.7 && temperature >= 18 && clouds <= 50){
-      image(iconWind[0], 50, 50);
+      image(sunny[0], 50, 50);
       subtitle=createElement('h4', "It's beautiful today. Don't forget your sunglasses!") //sundress/shorts + sunglasses
       subtitle.position(100,100);
     };
 
     if (windSpeed < 6.7 && temperature >= 18 && clouds > 50){
-      image(iconWind[0], 50, 50);
+      image(sunny[1], 50, 50);
       subtitle=createElement('h4', "It's warm and nice today, although a bit cloudy.") //sundress/shorts 
       subtitle.position(100,100);
     };
 
     if (windSpeed < 6.7 && temperature >= 12 && temperature < 18){
-      image(iconWind[0], 50, 50);
+      image(fall, 50, 50);
       subtitle=createElement('h4', "The weather is pretty amazing today - not too hot, not too cold.") //jeans + light sweater 
       subtitle.position(100,100);
     };
 
     if (windSpeed >= 11.2 && humidity < 25 && clouds >= 75 && temperature <= 5){
-      image(iconWind[0], 50, 50);
+      image(spring, 50, 50);
       subtitle=createElement('h4', "Feels like spring!") //parka/spring outfit 
       subtitle.position(100,100);
     };
 
     if (windSpeed >= 6.7 && windSpeed < 11.2 && humidity >= 75 && clouds >= 75 && temperature <= 5){
-      image(iconWind[0], 50, 50);
+      image(winter, 50, 50);
       subtitle=createElement('h4', "It's cold today - bundle up.") //winter clothes eg northface 
       subtitle.position(100,100);
     };
