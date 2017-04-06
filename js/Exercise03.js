@@ -45,12 +45,15 @@ function queryAPI(){ //building the url and loading the json in this function
 function draw(){
   var canvas=createCanvas(800,800); //x, y
   canvas.position(150,250);//left, top
-  // canvas.background(255); //so it erases everything 
-  //   fill(0);
-  //   noStroke();
-  
+  canvas.background(255); //so it erases everything 
+    fill(0);
+    noStroke();
+
   //drawing the sketch 
   if(weatherData){ //need this if loop so it only works when there is values for the data 
+    fill(0);
+    noStroke();
+
     // CITY NAME + temp 
     headingCity=createElement('h1', cityName) //so the element is h1 in css/html too
     headingCity.position(500,250); //x, y ; comes first 
@@ -77,37 +80,39 @@ function draw(){
       image(rainy, 0, 0); //50,50 indicates the position of the image on the screen
       subtitle=createElement('h4', "Looks like it's gonna rain today. Don't forget your umbrella! ")//rain gear 
       subtitle.position(500,160); //x,y position
-    };
+    }
 
-    if (windSpeed < 6.7 && temperature >= 18 && clouds <= 50){
-      image(sunny[0], 50, 50);
+    else if (windSpeed < 6.7 && temperature >= 18 && clouds <= 50){
+      image(sunny[0], 0, 0);
       subtitle=createElement('h4', "It's beautiful today. Don't forget your sunglasses!") //sundress/shorts + sunglasses
       subtitle.position(500,160);
-    };
+    }
 
-    if (windSpeed < 6.7 && temperature >= 18 && clouds > 50){
-      image(sunny[1], 50, 50);
+    else if (windSpeed < 6.7 && temperature >= 18 && clouds > 50){
+      image(sunny[1], 0, 0);
       subtitle=createElement('h4', "It's warm and nice today, although a bit cloudy.") //sundress/shorts 
       subtitle.position(500,160);
-    };
+    }
 
-    if (windSpeed < 6.7 && temperature >= 12 && temperature < 18){
-      image(fall, 50, 50);
+    else if (windSpeed < 6.7 && temperature >= 12 && temperature < 18){
+      image(fall, 0, 0);
       subtitle=createElement('h4', "The weather is pretty amazing today - not too hot, not too cold.") //jeans + light sweater 
       subtitle.position(500,160);
-    };
+    }
 
-    if (windSpeed >= 11.2 && humidity < 25 && clouds >= 75 && temperature <= 5){
-      image(spring, 50, 50);
+    else if (windSpeed >= 11.2 && humidity < 25 && clouds >= 75 && temperature <= 5){
+      image(spring, 0, 0);
       subtitle=createElement('h4', "Feels like spring!") //parka/spring outfit 
       subtitle.position(500,160);
-    };
+    }
 
-    if (windSpeed >= 6.7 && windSpeed < 11.2 && humidity >= 75 && clouds >= 75 && temperature <= 5){
-      image(winter, 50, 50);
+    else if (windSpeed >= 6.7 && windSpeed < 11.2 && humidity >= 75 && clouds >= 75 && temperature <= 5){
+      image(winter, 0, 0);
       subtitle=createElement('h4', "It's cold today - bundle up.") //winter clothes eg northface 
       subtitle.position(500,160);
-    };
-
+    }
   }
 }
+// function mousePressed(){
+//   remove()
+// }
